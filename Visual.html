@@ -8,18 +8,47 @@
     <title>Visual</title>
 </head>
 <body>
-    <div class="solar-system">
-        <div class="sun"></div>
-        <div class="mercury"></div>
-        <div class="venus"></div>
-        <div class="earth"></div>
-        <div class="mars"></div>
-        <div class="jupiter"></div>
-        <div class="saturn"></div>
-        <div class="uranus"></div>
-        <div class="neptune"></div>
-        <div class="pluto"></div>
-        <div class="main-asteroids-belt"></div>
+    <div class="background"> </div>
+<div class="control">
+        <div class="playState">
+            <div class="play hidden"></div>
+            <div class="pause">
+                <div class="pause__stick"></div>
+                <div class="pause__stick"></div>
+            </div>
+        </div>
+        
+        <div class="sunState">
+            <div class="sunModel sunMiniState"></div>
+        </div>
+        <div class="zoomState"></div>
+        </div>
     </div>
+
+    <div class="solarSystem">
+        <div class="sun mini"></div>
+        <div class="planet motionMiniSun" id="mercury"></div>
+        <div class="planet motionMiniSun" id="venus"></div>
+        <div class="planet motionMiniSun" id="earth"></div>
+        <div class="planet motionMiniSun" id="mars"></div>
+        <div class="planet motionMiniSun" id="jupiter"></div>
+        <div class="planet motionMiniSun" id="saturn"></div>
+        <div class="planet motionMiniSun" id="uranus"></div>
+        <div class="planet motionMiniSun" id="neptune"></div>
+        <div class="planet motionMiniSun" id="pluto"></div>
+    </div>
+
+    <div class="finder">
+        <span class="mercury">MERCURY</span>
+        <span class="venus">VENUS</span>
+        <span class="earth">EARTH</span>
+        <span class="mars">MARS</span>
+        <span class="jupiter">JUPITER</span>
+        <span class="saturn">SATURN</span>
+        <span class="uranus">URANUS</span>
+        <span class="neptune">NEPTUNE</span>
+        <span class="pluto">PLUTO</span>
+    </div>
+    <script src="Visual.js"></script>
 </body>
 </html>

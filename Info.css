@@ -1,46 +1,119 @@
-body{
-    padding: 0;
-    margin: 0;
+body {
+  background-color: #000000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.large-header {
-    position: relative;
-    width: 100%;
-    background: #111;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    z-index: 1;
- }
- 
- .demo .large-header {
-    background-color: #000000;
- }
- 
- .main-title {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    color: #F9F1E9;
-    text-align: center;
-    top: 10vh;
-    left: 50%;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
- }
- 
- .demo .main-title {
-    text-transform: uppercase;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
- }
- 
- .main-title .thin {
-    font-weight: 200;
-    margin: 2vh;
- }
- 
- @media only screen and (max-width: 768px) {
-    .demo .main-title {
-       font-size: 3em;
-    }
- }
+
+canvas {
+  display: block;
+  /* vertical-align: bottom; */
+}
+
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://marcbruederlin.github.io/particles.js/img/background.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: cover;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  color: white;
+  max-width: 90%;
+  padding: 2em 3em;
+  background: rgba(0, 0, 0, 0.75);
+  text-shadow: 0px 0px 2px #131415;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  border: 1px solid #00c7ec;
+  border-radius: 5px;
+  line-height: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.button:hover {
+  color: white;
+  box-shadow: 0 0 30px 0 rgba(0, 199, 236, 0.5);
+  background-color: #365359;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.button:hover:before {
+  -webkit-animation: shine 0.5s 0s linear;
+  -moz-animation: shine 0.5s 0s linear;
+  animation: shine 0.5s 0s linear;
+}
+
+.button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+.button:before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: white;
+  box-shadow: 0 0 15px 3px white;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+input[type="date"] {
+  background-color: rgba(57, 202, 255, 0.822);
+  padding: 4px;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+::-webkit-calendar-picker-indicator{
+  background-color: white;
+  cursor: pointer;
+  border-radius: 2px;
+}
